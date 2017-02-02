@@ -1,0 +1,91 @@
+/* THAT'S A WORK IN PROGRESS (like any other work) */
+
+@import 'variables';
+@import 'extensions';
+
+body {
+
+	background-color: $def_green !important;
+	margin: none !important;
+	padding: 0px !important;
+
+}
+
+/* remove any box-shadow */
+*, body * {
+
+	box-shadow: none !important;
+
+}
+
+/* reset sections width (wrapper and main contents) */
+.wrapper {
+
+	width: 90% !important;
+    min-width: 300px;
+    max-width: 1200px;
+
+    /* give precedence to override important */
+	> div.portalmain, 
+	div.portallinks {
+
+		@extend .fullwidth;
+
+	}
+
+}
+.portalmain {
+	
+	/* reset sections width */
+    /* give precedence to override important */
+	> div.portalheader,
+	> div.portalcontent,
+	div.portalheaderupper,
+	.bottomContainer {
+
+		@extend .fullwidth;
+
+	}
+
+}
+
+/* fix main content, footer and widget border radius */
+div.portalcontent, 
+div.portalfooter,
+div.widget-content,
+div.widget-header,
+div.widget-menubar {
+
+	border-radius: $border-radius;
+
+}
+
+/* remove top right widget (weather box, favourite etc.) */
+.tabfavorites {
+
+	display: none !important;
+
+}
+
+/* news carousel */
+.spotlight {
+
+	margin: auto !important;
+	float: none !important;
+	border: none !important;
+
+}
+
+/* Toggle widgets */
+.hiddenhidden {} /* not working with js */
+.widget {
+
+	div.widget-content,
+	div.widget-edit------- {
+
+		height: 0px !important;
+		overflow: hidden !important;
+
+	}
+
+}

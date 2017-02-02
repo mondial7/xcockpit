@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "XCockpit",
+  "description": "Playing with cockpit layout",
+  "version": "1.0",
+  
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["script.js"],
+    "matches": ["https://cockpit.scientificnet.org/","https://cockpit.scientificnet.org/default.aspx"]
+  }],
+  
+  "permissions": [
+    "activeTab"
+  ]
+}
